@@ -4,7 +4,7 @@
     "description": "This is an add-on to help teams and POs share US between them",
     "vendor": {
         "name": "Pedro Espinosa",
-        "url": "https://peloxoo.github.io/jira-plugin/home"
+        "url": "http://miliziandevelopers.eu/"
     },
     "baseUrl": "{{localBaseUrl}}",
     "links": {
