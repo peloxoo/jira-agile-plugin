@@ -28,7 +28,7 @@
                 "name": {
                     "value": "BDD Share"
                 },
-                "url": "/hello-world",
+                "url": "/activity",
                 "conditions": [{
                     "condition": "user_is_logged_in"
                 }]
