@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "test": "mocha",
+    "test": "mocha --reporter mocha-junit-reporter --reporter-options mochaFile=test/test-results.xml",
     "start": "node app.js"
   },
   "dependencies": {
@@ -17,5 +17,8 @@
     "jugglingdb-sqlite3": "0.0.5",
     "morgan": "^1.6.1",
     "static-expiry": ">=0.0.5"
+  },
+  "devDependencies": {
+    "mocha-junit-reporter": "^1.15.0"
   }
 }
