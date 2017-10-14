@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="0" tests="1" failures="0">
+  <testsuite name="Root Suite" timestamp="2017-10-14T20:10:00" tests="0" failures="0" time="0">
+  </testsuite>
+  <testsuite name="Array" timestamp="2017-10-14T20:10:00" tests="0" file="C:\Users\pelox\Documents\GitHub\jira-bdd-plugin\test\test.js" failures="0" time="0">
+  </testsuite>
+  <testsuite name="#indexOf()" timestamp="2017-10-14T20:10:00" tests="1" file="C:\Users\pelox\Documents\GitHub\jira-bdd-plugin\test\test.js" failures="0" time="0">
+    <testcase name="Array #indexOf() should return -1 when the value is not present" time="0" classname="should return -1 when the value is not present">
+    </testcase>
+  </testsuite>
+</testsuites>
