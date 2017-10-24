@@ -16,6 +16,8 @@
     "express-hbs": "*",
     "jugglingdb-sqlite3": "0.0.5",
     "morgan": "^1.6.1",
+    "request": "^2.83.0",
+    "request-promise": "^4.2.2",
     "static-expiry": ">=0.0.5"
   },
   "devDependencies": {

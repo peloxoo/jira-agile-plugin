@@ -1,4 +1,5 @@
 // Canned functionality for JIRA Activity
+
 $(function() {
     "use strict";
 
@@ -77,4 +78,11 @@ $(function() {
                 .text(function(item) { return item.name; });
         }
     });
+
+    /*
+    AP.request('/rest/api/2/project')
+    .then(data => alert(data.body))
+    .catch(e => alert(e.err));
+    */
+    
 });
