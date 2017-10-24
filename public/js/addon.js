@@ -1,25 +1,57 @@
 /* add-on script */
 // MyAddon functionality
-$(function() {
-    // Call REST API via the iframe
-    // Bridge functionality
-    // JiraActivity is registered by an external script that was included
-    AP.require(['request', 'JiraActivity'], function(request, JiraActivity) {
+$(function () {
+
+    AP.require(['request', 'JiraActivity'], function (request, JiraActivity) {
         request({
             url: '/rest/api/2/project',
-            success: function(response) {
-                // Convert the string response to JSON
+            type: 'GET',
+            success: function (response) {
                 response = JSON.parse(response);
-   
-                // Call your helper function to build the
-                // table, now that you have the data
+                for (var i = 0; i < response.length; i++) {
+                    console.log(response[i].name);
+                }
+
                 JiraActivity.buildProjectTable(response, ".projects");
             },
-            error: function(response) {
-                console.log("Error loading API (" + uri + ")");
-                console.log(arguments);
+            error: function (response) {
+                alert(arguments);
             },
             contentType: "application/json"
         });
     });
-   });
+
+    var issueData = {
+        "fields": {
+            "project": {
+                "key": "BDD"
+            },
+            "summary": "Tarea creada por código",
+            "description": "Creating of an issue using project keys and issue type names using the REST API",
+            "issuetype": {
+                "name": "Task"
+            }
+        }
+    };
+
+    AP.require('request', function (request) {
+        request({
+            url: '/rest/api/2/issue',
+            // adjust to a POST instead of a GET
+            type: 'POST',
+            data: JSON.stringify(issueData),
+            success: function (response) {
+                // convert the string response to JSON
+                response = JSON.parse(response);
+
+                // dump out the response to the console
+                console.log(response);
+            },
+            error: function () {
+                console.log(arguments);
+            },
+            // inform the server what type of data is in the body of the HTTP POST
+            contentType: "application/json",
+        });
+    });
+});

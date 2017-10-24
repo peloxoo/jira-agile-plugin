@@ -19,26 +19,78 @@ module.exports = function (app, addon) {
     // This is an example route that's used by the default "generalPage" module.
     // Verify that the incoming request is authenticated with Atlassian Connect
     app.get('/hello-world', addon.authenticate(), function (req, res) {
-            // Rendering a template is easy; the `render()` method takes two params: name of template
-            // and a json object to pass the context in
-            res.render('hello-world', {
-                title: 'the best BDD JIRA Plugin'
-                //issueId: req.query['issueId']
-            });
-        }
+        // Rendering a template is easy; the `render()` method takes two params: name of template
+        // and a json object to pass the context in
+        res.render('hello-world', {
+            title: 'the best BDD JIRA Plugin'
+            //issueId: req.query['issueId']
+        });
+    }
     );
 
-    app.get('/activity', addon.authenticate(), function (req, res) {
+    app.get('/bddShare', addon.authenticate(), function (req, res) {
         // Rendering a template is easy; the `render()` method takes two params: name of template
         // and a json object to pass the context in
         res.render('activity', {
-            title: 'JIRA activity'
+            title: 'BDD Share',
+            project: projects
             //issueId: req.query['issueId']
         });
     }
     );
 
     // Add any additional route handlers you need for views or REST resources here...
+
+    var rq = require('request-promise');
+    var projects;
+
+    var options = {
+        uri: 'https://urjctfg.atlassian.net/rest/api/2/project',
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': 'Basic YWRtaW46UHAyMzA2NTk='
+        },
+        json: true // Automatically parses the JSON string in the response
+    };
+
+    rq(options)
+        .then(function (repos) {
+            // console.log(repos);
+            projects = repos[0].key;
+        })
+        .catch(function (err) {
+            console.log(Error + err);
+        });
+
+    var opts = {
+        method: 'POST',
+        uri: 'https://urjctfg.atlassian.net/rest/api/2/issue',
+        body: {
+            "fields": {
+                "project": {
+                    "key": "BDD"
+                },
+                "summary": "Tarea creada por código",
+                "description": "Creating of an issue using project keys and issue type names using the REST API",
+                "issuetype": {
+                    "name": "Task"
+                }
+            }
+        },
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': 'Basic YWRtaW46UHAyMzA2NTk='
+        },
+        json: true // Automatically parses the JSON string in the response
+    };
+
+    rq(opts)
+    .then(function (repos) {
+        console.log(repos);
+    })
+    .catch(function (err) {
+        console.log(Error + err);
+    });
 
 
     // load any additional files you have in routes and apply those to the app
