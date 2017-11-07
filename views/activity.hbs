@@ -8,15 +8,31 @@
  </header>
 
  <div class="aui-page-panel main-panel">
-     <div class="aui-page-panel-inner">
-         <section class="aui-page-panel-item">
-             <div class="aui-group">
-                 <div class="aui-item">
-                     <div class="projects">
-                     </div>
-                 </div>
-             </div>
-         </section>
-         <p>{{project}}</p>
-     </div>
- </div>
+        <div class="aui-page-panel-inner">
+            <table class="aui">
+                <thead>
+                    <tr>
+                        <th>Proyecto</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each project}}
+                    <tr>
+                        <td headers="name">
+                            <a href="https://urjctfg.atlassian.net/browse/" + {{this.key}} target="_top">
+                                {{this.name}}</a>
+                        </td>
+                        <td headers="actions">
+                            <button class="aui-button aui-button-primary dial-action">Añadir tarea</button>
+                        </td>
+                    </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+            <div id="dial-content" class="dialog-content" aria-hidden="true">
+                <p>Bien!</p>
+                <button id="dial-close" class="aui-button">Cerrar</button>
+            </div>
+        </div>
+    </div>

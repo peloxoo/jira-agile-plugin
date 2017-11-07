@@ -34,7 +34,6 @@ module.exports = function (app, addon) {
         res.render('activity', {
             title: 'BDD Share',
             project: projects
-            //issueId: req.query['issueId']
         });
     }
     );
@@ -42,7 +41,7 @@ module.exports = function (app, addon) {
     // Add any additional route handlers you need for views or REST resources here...
 
     var rq = require('request-promise');
-    var projects;
+    var projects = [];
 
     var options = {
         uri: 'https://urjctfg.atlassian.net/rest/api/2/project',
@@ -55,14 +54,15 @@ module.exports = function (app, addon) {
 
     rq(options)
         .then(function (repos) {
-            // console.log(repos);
-            projects = repos[0].key;
+            for(var i=0; i<2; i++){
+                projects[i] = repos[i];
+            }
         })
         .catch(function (err) {
             console.log(Error + err);
         });
 
-    var opts = {
+    /*var opts = {
         method: 'POST',
         uri: 'https://urjctfg.atlassian.net/rest/api/2/issue',
         body: {
@@ -90,7 +90,7 @@ module.exports = function (app, addon) {
     })
     .catch(function (err) {
         console.log(Error + err);
-    });
+    });*/
 
 
     // load any additional files you have in routes and apply those to the app

@@ -4,12 +4,17 @@
   line-height: 60px;
   padding-top: 20px;
 }
-.intro-header p.subtitle {
-  font-size: 24px;
-  line-height: 30px;
-  padding-bottom: 20px;
-}
-.main-panel .aui-page-panel-item {
+
+.main-panel .aui-page-panel-inner {
   padding: 20px 40px 20px 0;
-  height: 100px;
+}
+
+.main-panel .aui {
+  width: 40%;
+  margin-left: 25em;
+}
+
+.dialog-content {
+  width: 100%;
+  text-align: center;
 }
