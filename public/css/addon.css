@@ -5,8 +5,12 @@
   padding-top: 20px;
 }
 
+.aui-page-panel.main-panel{
+  height: 20em;
+}
+
 .main-panel .aui-page-panel-inner {
-  padding: 20px 40px 20px 0;
+  padding: 20px 0 20px 0;
 }
 
 .main-panel .aui {
@@ -15,6 +19,38 @@
 }
 
 .dialog-content {
-  width: 100%;
-  text-align: center;
+  width: 50%;
+  background-color: #A9A9A9;
+  margin-left: 22em;
+  border-radius: 4px;
+  padding: 10px;
+  height: 18em;
+}
+
+.issue-text > p {
+  font-weight: bold
+}
+
+.issue-text > label {
+  font-weight: bold
+}
+
+.button-actions {
+  position: absolute;
+  bottom: 8px;
+  right: 16px;
+}
+
+.add-button {
+  background-color: #228B22;
+  font-weight: bold;
+  color: white;
+  border: none;
+}
+
+.cancel-button {
+  background-color: #FF0000;
+  font-weight: bold;
+  color: white;
+  border: none;
 }

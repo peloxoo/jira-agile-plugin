@@ -31,8 +31,19 @@
                 </tbody>
             </table>
             <div id="dial-content" class="dialog-content" aria-hidden="true">
-                <p>Bien!</p>
-                <button id="dial-close" class="aui-button">Cerrar</button>
+                <div class="issue-text">
+                    <p>Feature: <input type="text" placeholder="Introducir feature"/></p>
+                    <p>As: <input type="text" placeholder="Ej: User"/> I want to</p>
+                    <p>Description: <input type="text" placeholder="A short description"/> so then</p>
+                    <p>Scenario: <input type="text" placeholder="Scenario"/></p>
+                    <p>Given: <input type="text" placeholder="Given"/></p>
+                    <p>When: <input type="text" placeholder="When"/></p>
+                    <p>Then: <input type="text" placeholder="Then"/></p>
+                </div>
+                <div class="button-actions">
+                    <button class="aui-button add-button">Añadir</button>
+                    <button class="aui-button cancel-button dial-close">Cancelar</button>
+                </div>
             </div>
         </div>
     </div>
