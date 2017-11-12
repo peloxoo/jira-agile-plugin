@@ -8,7 +8,7 @@ $(function () {
     });
 
     // Hides the dialog
-    AJS.$("#dial-close").click(function (e) {
+    AJS.$(".dial-close").click(function (e) {
         e.preventDefault();
         AJS.dialog2("#dial-content").hide();
     });
