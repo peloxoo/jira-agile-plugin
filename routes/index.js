@@ -39,58 +39,14 @@ module.exports = function (app, addon) {
     );
 
     // Add any additional route handlers you need for views or REST resources here...
-
-    var rq = require('request-promise');
     var projects = [];
 
-    var options = {
-        uri: 'https://urjctfg.atlassian.net/rest/api/2/project',
-        headers: {
-            'Content-Type': 'application/json',
-            'Authorization': 'Basic YWRtaW46UHAyMzA2NTk='
-        },
-        json: true // Automatically parses the JSON string in the response
-    };
-
-    rq(options)
-        .then(function (repos) {
-            for(var i=0; i<2; i++){
-                projects[i] = repos[i];
-            }
-        })
-        .catch(function (err) {
-            console.log(Error + err);
-        });
-
-    /*var opts = {
-        method: 'POST',
-        uri: 'https://urjctfg.atlassian.net/rest/api/2/issue',
-        body: {
-            "fields": {
-                "project": {
-                    "key": "BDD"
-                },
-                "summary": "Tarea creada por código",
-                "description": "Creating of an issue using project keys and issue type names using the REST API",
-                "issuetype": {
-                    "name": "Task"
-                }
-            }
-        },
-        headers: {
-            'Content-Type': 'application/json',
-            'Authorization': 'Basic YWRtaW46UHAyMzA2NTk='
-        },
-        json: true // Automatically parses the JSON string in the response
-    };
-
-    rq(opts)
-    .then(function (repos) {
-        console.log(repos);
-    })
-    .catch(function (err) {
-        console.log(Error + err);
-    });*/
+    var service = require('../public/js/services');
+    service.getProjects().then(function (result){
+        for(var i=0; i<2; i++){
+            projects[i] = result[i];
+        }
+    });
 
 
     // load any additional files you have in routes and apply those to the app
