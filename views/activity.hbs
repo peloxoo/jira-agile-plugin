@@ -24,7 +24,8 @@
                                 {{this.name}}</a>
                         </td>
                         <td headers="actions">
-                            <button class="aui-button aui-button-primary dial-action">Añadir tarea</button>
+                            <input class="aui-button aui-button-primary dial-action"
+                            type="button" onclick="namingProject('{{this.name}}')" value="Añadir tarea" />
                         </td>
                     </tr>
                     {{/each}}
@@ -32,17 +33,16 @@
             </table>
             <div id="dial-content" class="dialog-content" aria-hidden="true">
                 <div class="issue-text">
-                    <p>Feature: <input type="text" placeholder="Introducir feature"/></p>
-                    <p>As: <input type="text" placeholder="Ej: User"/> I want to</p>
-                    <p>Description: <input type="text" placeholder="A short description"/> so then</p>
-                    <p>Scenario: <input type="text" placeholder="Scenario"/></p>
-                    <p>Given: <input type="text" placeholder="Given"/></p>
-                    <p>When: <input type="text" placeholder="When"/></p>
-                    <p>Then: <input type="text" placeholder="Then"/></p>
+                    <p id="title"></p>
+                    <br>
+                    <input style="width: 27.5em;" id="myTitle" type="text" class="myArea" value="Feature: " />
+                    <textarea id="myText" class="myArea" rows="12" cols="50"></textarea>
                 </div>
                 <div class="button-actions">
-                    <button class="aui-button add-button">Añadir</button>
-                    <button class="aui-button cancel-button dial-close">Cancelar</button>
+                    <input class="aui-button aui-button-primary add-button"
+                    type="button" onclick="createIssue()" value="Añadir" />
+                    <input class="aui-button cancel-button dial-close" type="button"
+                    value="Cancelar" />
                 </div>
             </div>
         </div>
