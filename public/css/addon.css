@@ -63,5 +63,8 @@
   position: absolute;
 }
 #myText{
-  margin-top: 3em;
+  margin-top: 3em
+}
+#myTitle{
+  font-weight: bold
 }

@@ -15,12 +15,12 @@ $(function () {
         AJS.dialog2("#dial-content").hide();
     });
 
-    document.getElementById('myText').value+='As:  I want to';
-    document.getElementById('myText').value+='\nDescription:  so then';
-    document.getElementById('myText').value+='\n\nScenario: ';
-    document.getElementById('myText').value+='\nGiven: ';
-    document.getElementById('myText').value+='\nWhen: ';
-    document.getElementById('myText').value+='\nThen: ';
+    document.getElementById('myText').value+='AS:  I WANT TO';
+    document.getElementById('myText').value+='\nDESCRIPTION:  SO THEN';
+    document.getElementById('myText').value+='\n\nSCENARIO: ';
+    document.getElementById('myText').value+='\nGIVEN: ';
+    document.getElementById('myText').value+='\nWHEN: ';
+    document.getElementById('myText').value+='\nTHEN: ';
 });
 
 function namingProject(name) {
