@@ -20,12 +20,12 @@ function getProjects() {
 }
 
 function createIssue(key) {
-    if (!checkFeature) {
+    if (!checkFeature()) {
         alert('Debes rellenar la feature');
-    } else if (!checkDescription) {
+    } else if (!checkDescription()) {
         alert('No has rellenado la descripción, ¿estás seguro de enviar el issue?');
     } else {
-        doPost(key);
+        alert('Añadido el issue en Gherkin al proyecto');
     }
 }
 

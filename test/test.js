@@ -8,19 +8,9 @@ describe('Array', function() {
 });
 */
 
-var should = require('chai').should();
 var expect = require('chai').expect;
-var myAuxCode = require('./auxfunctions');
 var myCode = require('../public/js/services');
 
-describe('tests', function () {
-  describe('testFunction', function () {
-    it('should return 1', function () {
-      // Call the exported function from the module
-      myAuxCode.testFunction().should.equal(1);
-    });
-  })
-})
 // test para la llamada a la API de JIRA que devuelve la lista de proyectos del usuario
 describe('testing promises', function () {
   describe('getProjects', function () {

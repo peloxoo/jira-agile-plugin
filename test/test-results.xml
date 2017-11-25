@@ -1,23 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="Mocha Tests" time="3.0999999999999996" tests="3" failures="0">
-  <testsuite name="Root Suite" timestamp="2017-11-23T21:51:18" tests="0" failures="0" time="0">
+<testsuites name="Mocha Tests" time="2.607" tests="2" failures="0">
+  <testsuite name="Root Suite" timestamp="2017-11-25T14:13:44" tests="0" failures="0" time="0">
   </testsuite>
-  <testsuite name="tests" timestamp="2017-11-23T21:51:18" tests="0" file="C:\Users\pelox\Documents\GitHub\jira-bdd-plugin\test\test.js" failures="0" time="0">
+  <testsuite name="testing promises" timestamp="2017-11-25T14:13:44" tests="0" file="C:\Users\pelox\Documents\GitHub\jira-bdd-plugin\test\test.js" failures="0" time="0">
   </testsuite>
-  <testsuite name="testFunction" timestamp="2017-11-23T21:51:18" tests="1" file="C:\Users\pelox\Documents\GitHub\jira-bdd-plugin\test\test.js" failures="0" time="0.001">
-    <testcase name="tests testFunction should return 1" time="0.001" classname="should return 1">
+  <testsuite name="getProjects" timestamp="2017-11-25T14:13:44" tests="1" file="C:\Users\pelox\Documents\GitHub\jira-bdd-plugin\test\test.js" failures="0" time="1.529">
+    <testcase name="testing promises getProjects should return OK" time="1.529" classname="should return OK">
     </testcase>
   </testsuite>
-  <testsuite name="testing promises" timestamp="2017-11-23T21:51:18" tests="0" file="C:\Users\pelox\Documents\GitHub\jira-bdd-plugin\test\test.js" failures="0" time="0">
+  <testsuite name="testing issue" timestamp="2017-11-25T14:13:45" tests="0" file="C:\Users\pelox\Documents\GitHub\jira-bdd-plugin\test\test.js" failures="0" time="0">
   </testsuite>
-  <testsuite name="getProjects" timestamp="2017-11-23T21:51:18" tests="1" file="C:\Users\pelox\Documents\GitHub\jira-bdd-plugin\test\test.js" failures="0" time="1.589">
-    <testcase name="testing promises getProjects should return OK" time="1.589" classname="should return OK">
-    </testcase>
-  </testsuite>
-  <testsuite name="testing issue" timestamp="2017-11-23T21:51:20" tests="0" file="C:\Users\pelox\Documents\GitHub\jira-bdd-plugin\test\test.js" failures="0" time="0">
-  </testsuite>
-  <testsuite name="doPost" timestamp="2017-11-23T21:51:20" tests="1" file="C:\Users\pelox\Documents\GitHub\jira-bdd-plugin\test\test.js" failures="0" time="1.51">
-    <testcase name="testing issue doPost should return OK" time="1.51" classname="should return OK">
+  <testsuite name="doPost" timestamp="2017-11-25T14:13:45" tests="1" file="C:\Users\pelox\Documents\GitHub\jira-bdd-plugin\test\test.js" failures="0" time="1.078">
+    <testcase name="testing issue doPost should return OK" time="1.078" classname="should return OK">
     </testcase>
   </testsuite>
 </testsuites>
