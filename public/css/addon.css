@@ -6,7 +6,7 @@
 }
 
 .aui-page-panel.main-panel{
-  height: 20em;
+  height: 30em;
 }
 
 .main-panel .aui-page-panel-inner {
@@ -19,12 +19,12 @@
 }
 
 .dialog-content {
-  width: 50%;
+  width: 45%;
   background-color: #A9A9A9;
-  margin-left: 22em;
+  margin-left: 25em;
   border-radius: 4px;
   padding: 10px;
-  height: 18em;
+  height: 22em;
 }
 
 .issue-text > p {
@@ -37,7 +37,7 @@
 
 .button-actions {
   position: absolute;
-  bottom: 8px;
+  bottom: 2em;
   right: 16px;
 }
 
@@ -53,4 +53,18 @@
   font-weight: bold;
   color: white;
   border: none;
+}
+
+.myArea{
+  border: 3px solid #228B22;
+  padding: 5px;
+  font-family: Tahoma, sans-serif;
+  border-radius: 5px;
+  position: absolute;
+}
+#myText{
+  margin-top: 3em
+}
+#myTitle{
+  font-weight: bold
 }
