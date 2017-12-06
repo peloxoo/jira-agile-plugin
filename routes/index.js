@@ -43,7 +43,7 @@ module.exports = function (app, addon) {
 
     var service = require('../public/js/services');
     service.getProjects().then(function (result){
-        for(var i=0; i<2; i++){
+        for(var i=0; i<result.length; i++){
             projects[i] = result[i];
         }
     });

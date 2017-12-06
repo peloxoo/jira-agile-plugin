@@ -68,3 +68,22 @@
 #myTitle{
   font-weight: bold
 }
+
+.message-temp{
+  color: #000;
+  border: solid;
+  border-radius: 5px;
+  border-color: #228B22;
+  padding: 5px;
+  position: absolute;
+  left: 15em;
+  font-weight: bold;
+}
+
+confirmation{
+  background: #228B22;
+}
+
+failure{
+  background: #FF0000;
+}

@@ -1,17 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="Mocha Tests" time="2.607" tests="2" failures="0">
-  <testsuite name="Root Suite" timestamp="2017-11-25T14:13:44" tests="0" failures="0" time="0">
+<testsuites name="Mocha Tests" time="2.01" tests="2" failures="2">
+  <testsuite name="Root Suite" timestamp="2017-12-03T16:45:32" tests="0" failures="0" time="0">
   </testsuite>
-  <testsuite name="testing promises" timestamp="2017-11-25T14:13:44" tests="0" file="C:\Users\pelox\Documents\GitHub\jira-bdd-plugin\test\test.js" failures="0" time="0">
+  <testsuite name="testing promises" timestamp="2017-12-03T16:45:32" tests="0" file="C:\Users\pelox\Documents\GitHub\jira-bdd-plugin\test\test.js" failures="0" time="0">
   </testsuite>
-  <testsuite name="getProjects" timestamp="2017-11-25T14:13:44" tests="1" file="C:\Users\pelox\Documents\GitHub\jira-bdd-plugin\test\test.js" failures="0" time="1.529">
-    <testcase name="testing promises getProjects should return OK" time="1.529" classname="should return OK">
+  <testsuite name="getProjects" timestamp="2017-12-03T16:45:32" tests="1" file="C:\Users\pelox\Documents\GitHub\jira-bdd-plugin\test\test.js" failures="1" time="2.006">
+    <testcase name="testing promises getProjects should return OK" time="2.006" classname="should return OK">
+      <failure><![CDATA[Error: timeout of 2000ms exceeded. Ensure the done() callback is being called in this test.
+    at Timeout.<anonymous> (C:\Users\pelox\Documents\GitHub\jira-bdd-plugin\node_modules\mocha\lib\runnable.js:226:19)]]></failure>
     </testcase>
   </testsuite>
-  <testsuite name="testing issue" timestamp="2017-11-25T14:13:45" tests="0" file="C:\Users\pelox\Documents\GitHub\jira-bdd-plugin\test\test.js" failures="0" time="0">
+  <testsuite name="testing issue" timestamp="2017-12-03T16:45:34" tests="0" file="C:\Users\pelox\Documents\GitHub\jira-bdd-plugin\test\test.js" failures="0" time="0">
   </testsuite>
-  <testsuite name="doPost" timestamp="2017-11-25T14:13:45" tests="1" file="C:\Users\pelox\Documents\GitHub\jira-bdd-plugin\test\test.js" failures="0" time="1.078">
-    <testcase name="testing issue doPost should return OK" time="1.078" classname="should return OK">
+  <testsuite name="doPost" timestamp="2017-12-03T16:45:34" tests="1" file="C:\Users\pelox\Documents\GitHub\jira-bdd-plugin\test\test.js" failures="1" time="0.004">
+    <testcase name="testing issue doPost should return OK" time="0.004" classname="should return OK">
+      <failure><![CDATA[ReferenceError: document is not defined
+    at Object.doPost (C:\Users\pelox\Documents\GitHub\jira-bdd-plugin\public\js\services.js:97:53)
+    at Context.it (C:\Users\pelox\Documents\GitHub\jira-bdd-plugin\test\test.js:29:14)
+    at callFnAsync (C:\Users\pelox\Documents\GitHub\jira-bdd-plugin\node_modules\mocha\lib\runnable.js:349:8)
+    at Test.Runnable.run (C:\Users\pelox\Documents\GitHub\jira-bdd-plugin\node_modules\mocha\lib\runnable.js:301:7)
+    at Runner.runTest (C:\Users\pelox\Documents\GitHub\jira-bdd-plugin\node_modules\mocha\lib\runner.js:422:10)
+    at C:\Users\pelox\Documents\GitHub\jira-bdd-plugin\node_modules\mocha\lib\runner.js:528:12
+    at next (C:\Users\pelox\Documents\GitHub\jira-bdd-plugin\node_modules\mocha\lib\runner.js:342:14)
+    at C:\Users\pelox\Documents\GitHub\jira-bdd-plugin\node_modules\mocha\lib\runner.js:352:7
+    at next (C:\Users\pelox\Documents\GitHub\jira-bdd-plugin\node_modules\mocha\lib\runner.js:284:14)
+    at Immediate.<anonymous> (C:\Users\pelox\Documents\GitHub\jira-bdd-plugin\node_modules\mocha\lib\runner.js:320:5)]]></failure>
     </testcase>
   </testsuite>
 </testsuites>

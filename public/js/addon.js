@@ -7,6 +7,10 @@ $(function () {
     // Shows the dialog when the "Show dialog" button is clicked
     AJS.$(".dial-action").click(function () {
         AJS.dialog2("#dial-content").show();
+        /*setTimeout(function(){
+            document.getElementById('confirmationMessage').style.display="block";
+            location.reload(true);
+        },1000)*/
     });
 
     // Hides the dialog
@@ -22,7 +26,3 @@ $(function () {
     document.getElementById('myText').value+='\nWHEN: ';
     document.getElementById('myText').value+='\nTHEN: ';
 });
-
-function namingProject(name) {
-    document.getElementById("title").innerHTML = "Projecto: " + name;
-}

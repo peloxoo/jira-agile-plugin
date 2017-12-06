@@ -20,12 +20,12 @@
                     {{#each project}}
                     <tr>
                         <td headers="name">
-                            <a href="https://urjctfg.atlassian.net/browse/" + {{this.key}} target="_top">
+                            <a id="{{this.key}}" href="#" onclick="changeLink('{{this.key}}')" target="_blank">
                                 {{this.name}}</a>
                         </td>
                         <td headers="actions">
                             <input class="aui-button aui-button-primary dial-action"
-                            type="button" onclick="namingProject('{{this.name}}')" value="Añadir tarea" />
+                            type="button" onclick="namingProject('{{this.name}}','{{this.key}}')" value="Añadir tarea" />
                         </td>
                     </tr>
                     {{/each}}
@@ -33,7 +33,10 @@
             </table>
             <div id="dial-content" class="dialog-content" aria-hidden="true">
                 <div class="issue-text">
+                    <span id="confirmationMessage" class="confirmation message-temp">Tarea creada correctamente</span>
+                    <span id="FailureMessage" class="failure message-temp">Fallo al crear la tarea</span>
                     <p id="title"></p>
+                    <p id="projectKey"></p>
                     <br>
                     <input style="width: 27.5em;" id="myTitle" type="text" class="myArea" value="Feature: " />
                     <textarea id="myText" class="myArea" rows="12" cols="50"></textarea>
