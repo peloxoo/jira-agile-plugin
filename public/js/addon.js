@@ -11,6 +11,7 @@ $(function () {
             document.getElementById('confirmationMessage').style.display="block";
             location.reload(true);
         },1000)*/
+        refreshIssue();
     });
 
     // Hides the dialog
@@ -19,10 +20,19 @@ $(function () {
         AJS.dialog2("#dial-content").hide();
     });
 
-    document.getElementById('myText').value+='AS:  I WANT TO';
+    AJS.$(".closer").click(function (e) {
+        document.getElementById('ConfirmationMessage').style.display="none";
+        document.getElementById('FailureMessage').style.display="none";
+    });
+
+});
+
+function refreshIssue(){
+    document.getElementById('myTitle').value='Feature: ';
+    document.getElementById('myText').value='AS:  I WANT TO';
     document.getElementById('myText').value+='\nDESCRIPTION:  SO THEN';
     document.getElementById('myText').value+='\n\nSCENARIO: ';
     document.getElementById('myText').value+='\nGIVEN: ';
     document.getElementById('myText').value+='\nWHEN: ';
     document.getElementById('myText').value+='\nTHEN: ';
-});
+}

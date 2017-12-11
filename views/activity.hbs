@@ -33,12 +33,16 @@
             </table>
             <div id="dial-content" class="dialog-content" aria-hidden="true">
                 <div class="issue-text">
-                    <span id="confirmationMessage" class="confirmation message-temp">Tarea creada correctamente</span>
-                    <span id="FailureMessage" class="failure message-temp">Fallo al crear la tarea</span>
+                    <span id="ConfirmationMessage" class="confirmationMessage message-temp">
+                        Tarea creada correctamente<span class="fa fa-close closer"></span>
+                    </span>
+                    <span id="FailureMessage" class="failureMessage message-temp">
+                        Error: Debes rellenar la feature y la descripción<span class="fa fa-close closer"></span>
+                    </span>
                     <p id="title"></p>
                     <p id="projectKey"></p>
                     <br>
-                    <input style="width: 27.5em;" id="myTitle" type="text" class="myArea" value="Feature: " />
+                    <input style="width: 27.5em;" id="myTitle" type="text" class="myArea" />
                     <textarea id="myText" class="myArea" rows="12" cols="50"></textarea>
                 </div>
                 <div class="button-actions">

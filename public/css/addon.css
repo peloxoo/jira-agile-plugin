@@ -21,7 +21,7 @@
 .dialog-content {
   width: 45%;
   background-color: #A9A9A9;
-  margin-left: 25em;
+  margin-left: 25vw;
   border-radius: 4px;
   padding: 10px;
   height: 22em;
@@ -71,19 +71,30 @@
 
 .message-temp{
   color: #000;
-  border: solid;
   border-radius: 5px;
-  border-color: #228B22;
-  padding: 5px;
+  padding: 8px 50px;
   position: absolute;
-  left: 15em;
   font-weight: bold;
 }
-
-confirmation{
+.confirmationMessage{
+  left: 18vw;
   background: #228B22;
+  display: none;
+}
+.failureMessage{
+  left: 11vw;
+  background: #FF0000;
+  display: none;
+}
+.closer{
+  position: absolute;
+  padding: 0.2px;
+  margin-top: -5px;
+  margin-left: 30px;
 }
 
-failure{
-  background: #FF0000;
+.closer:hover{
+  border: solid;
+  border-style: solid;
+  border-width: 1px;
 }

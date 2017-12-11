@@ -26,76 +26,13 @@ function createIssue() {
     var feature = document.getElementById('myTitle').value;
     var description = document.getElementById('myText').value;
 
-    if (!checkFeature(feature)) {
-        alert('Debes rellenar la feature');
-    } else if (!checkDescription(description)) {
-        alert('No has rellenado la descripción, ¿estás seguro de enviar el issue?');
+    if (!checkFeature(feature) || !checkDescription(description)) {
+        showFailureMessage();
     } else {
         doPost(feature, description);
+        showConfirmationMessage();
     }
 }
-
-/*function doPost() { 
-    var rq = require('request-promise');
-    var feature = document.getElementById('myTitle').value;
-    var description = document.getElementById('myText').value;
-    var credentials = b64EncodeUnicode('admin' + ':' + 'Pp230659');
-    
-    var optsPost = {
-        method: 'POST',
-        uri: '/rest/api/2/issue',
-        body: {
-            "fields": {
-                "project": {
-                    "key": currentTitle
-                },
-                "summary": feature,
-                "description": description,
-                "issuetype": {
-                    "name": "Task"
-                }
-            }
-        },
-        headers: {
-            'Content-Type': 'application/json',
-            'Authorization': credentials
-        },
-        json: true // Automatically parses the JSON string in the response
-    };
-
-    return rq(optsPost)
-        .then(function (repos) {
-            return repos;
-        })
-        .catch(function (err) {
-            console.log(Error + err);
-        })*/
-
-    /*AJS.$.ajax({
-        type: 'POST',
-        url: 'https://urjctfg.atlassian.net/rest/api/2/issue',
-        data: JSON.stringify({
-            "fields": {
-                "project": {
-                    "key": "BDD"
-                },
-                "summary": "Prueba ajax",
-                "description": "Creating of an issue using project keys and issue type names using the REST API",
-                "issuetype": {
-                    "name": "Task"
-                }
-            }
-        }),
-        success: function(data){
-            alert(data);
-        },
-        contentType: 'application/json',
-        dataType: 'json',
-        beforeSend: function(xhr){
-            xhr.setRequestHeader('Authorization', 'Basic YWRtaW46UHAyMzA2NTk=');
-        }
-    });
-}*/
 
 function doPost(feature, description) {
     AP.request({
@@ -154,3 +91,19 @@ function namingProject(name, key){
     currentTitle = name;
     currentKey = key;
 }
+
+function showConfirmationMessage(){
+    document.getElementById('ConfirmationMessage').style.display="block";
+    setTimeout(function(){
+        AJS.dialog2("#dial-content").hide();
+        document.getElementById('ConfirmationMessage').style.display="none";
+        //location.reload(true);
+    },1000)
+};
+
+function showFailureMessage(){
+    document.getElementById('FailureMessage').style.display="block";
+    setTimeout(function(){
+        document.getElementById('FailureMessage').style.display="none";
+    },3000)
+};
